@@ -1,0 +1,11 @@
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/data/icudtl.dat
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/flutter_windows.dll
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/native_assets.yaml
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/jared/Weatherapp/weather_app/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag
