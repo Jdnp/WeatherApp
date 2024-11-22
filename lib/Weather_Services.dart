@@ -1,5 +1,3 @@
-// lib/services/weather_service.dart
-
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -8,14 +6,22 @@ class WeatherService {
   final String baseUrl = 'https://api.openweathermap.org/data/2.5';
 
   Future<dynamic> fetchCurrentWeather(String query) async {
-    final url = query.contains(',')
-        ? '$baseUrl/weather?q=$query&appid=$apiKey&units=imperial'
-        : '$baseUrl/weather?zip=$query,us&appid=$apiKey&units=imperial';
+    final url = '$baseUrl/weather?q=$query&appid=$apiKey&units=imperial';
     final response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       return jsonDecode(response.body);
     } else {
-      throw Exception('Failed to load weather data');
+      throw Exception('Failed to fetch weather data.');
+    }
+  }
+
+  Future<dynamic> fetchForecast(String query) async {
+    final url = '$baseUrl/forecast?q=$query&appid=$apiKey&units=imperial';
+    final response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body);
+    } else {
+      throw Exception('Failed to fetch forecast data.');
     }
   }
 }
