@@ -8,7 +8,9 @@ class WeatherService {
   final String baseUrl = 'https://api.openweathermap.org/data/2.5';
 
   Future<dynamic> fetchCurrentWeather(String query) async {
-    final url = '$baseUrl/weather?q=$query&appid=$apiKey&units=imperial';
+    final url = query.contains(',')
+        ? '$baseUrl/weather?q=$query&appid=$apiKey&units=imperial'
+        : '$baseUrl/weather?zip=$query,us&appid=$apiKey&units=imperial';
     final response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       return jsonDecode(response.body);

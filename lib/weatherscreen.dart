@@ -1,6 +1,3 @@
-//Weather Screen
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:weather_app/Weather_Services.dart';
 
@@ -51,7 +48,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 fetchWeatherData();
               },
               decoration: InputDecoration(
-                labelText: 'Enter city,state',
+                labelText: 'Enter city,state or zip code',
                 border: OutlineInputBorder(),
               ),
             ),
@@ -64,10 +61,11 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         'City: ${weatherData!['name']}',
                         style: TextStyle(fontSize: 24),
                       ),
-                      Text(
-                        'State: ${query.contains(',') && query.split(',').length > 1 ? query.split(',')[1].trim() : 'N/A'}',
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      if (query.contains(','))
+                        Text(
+                          'State: ${query.split(',').length > 1 ? query.split(',')[1].trim() : 'N/A'}',
+                          style: TextStyle(fontSize: 18),
+                        ),
                       Text(
                         'Temperature: ${weatherData!['main']['temp']}°F',
                         style: TextStyle(fontSize: 18),
